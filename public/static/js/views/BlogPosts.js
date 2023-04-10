@@ -9,7 +9,6 @@ export default class extends AbstractView {
 
     async getHtml() {
         return `
-    <link rel="stylesheet" href="/static/css/blog.css">
     <header>
         <h3>Blog Posts</h3>
         <p>You are viewing post #${this.postId}</p>

@@ -8,7 +8,6 @@ export default class extends AbstractView {
 
     async getHtml() {
         return `
-    <link rel="stylesheet" href="/static/css/about.css">
     <header>
         <h3>About Me</h3>
     </header>

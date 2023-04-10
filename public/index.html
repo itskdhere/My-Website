@@ -8,6 +8,100 @@
 
     <title>itskdhere</title>
 
+    <style>
+        .LED1 {
+            position: relative;
+            top: -97px;
+            left: 85px;
+            height: 14px;
+            width: 14px;
+            border-radius: 50%;
+            animation: LED_Blink1 0.2s steps(1) 0s 1000 alternate none;
+        }
+
+        @keyframes LED_Blink1 {
+            0% {
+                background: rgb(20, 60, 50);
+            }
+
+            50% {
+                background: rgb(250, 240, 0);
+            }
+        }
+
+        .LED2 {
+            position: relative;
+            top: -127px;
+            left: 110px;
+            height: 14px;
+            width: 14px;
+            border-radius: 50%;
+            animation: LED_Blink2 0.13s steps(1) 0s 1000 alternate none;
+        }
+
+        @keyframes LED_Blink2 {
+            0% {
+                background: rgb(0, 60, 40);
+            }
+
+            50% {
+                background: rgb(10, 240, 20);
+            }
+        }
+
+        .Text {
+            position: relative;
+            top: -162px;
+            left: 22px;
+            padding: 5px;
+            max-width: 12%;
+            color: black;
+            background-color: rgb(170, 210, 220);
+            font-size: 10px;
+            text-align: center;
+            border-radius: 2px;
+        }
+
+        .Box {
+            position: relative;
+            margin: auto;
+            top: 200px;
+            height: 90px;
+            width: 150px;
+            /*background-color: black;*/
+        }
+
+        .Server {
+            position: relative;
+            top: 10px;
+            margin: auto;
+            height: 40px;
+            width: 120px;
+            background: rgb(120, 150, 160);
+            border-radius: 6px;
+        }
+
+        .Base {
+            position: relative;
+            top: 30px;
+            margin: auto;
+            height: 10px;
+            width: 80px;
+            background: rgb(120, 150, 160);
+            border-radius: 2px;
+        }
+
+        .Stick {
+            position: relative;
+            top: -30px;
+            margin: auto;
+            height: 55px;
+            width: 8px;
+            background: rgb(120, 150, 160);
+            border-radius: 2px;
+        }
+    </style>
+
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
@@ -19,20 +113,34 @@
     <link rel="stylesheet" href="/static/css/contact.css">
 
     <link rel="icon" href="/static/img/nodejs.png" type="image/icon type">
+
     <script>
         document.onreadystatechange = function () {
             if (document.readyState !== "complete") {
                 document.querySelector("body").style.visibility = "hidden";
-                // document.querySelector("#loader").style.visibility = "visible";
+                document.querySelector("#loader").style.visibility = "visible";
             } else {
-                // document.querySelector("#loader").style.display = "none";
+                document.querySelector("#loader").style.display = "none";
                 document.querySelector("body").style.visibility = "visible";
             }
         };
     </script>
+
 </head>
 
 <body class="light solar">
+
+    <div class="Box" id="loader">
+        <p class="Server"></p>
+        <p class="Base"></p>
+        <p class="Stick"></p>
+        <p class="LED1"></p>
+        <p class="LED2"></p>
+        <p class="Text">
+            200
+        </p>
+    </div>
+
     <!-- Navbar -->
     <nav class="navbar">
         <ul class="navbar-nav">

@@ -10,12 +10,12 @@ export default class extends AbstractView {
     return `
         <header>
 
-        <h1 style="font-family: 'Open Sans'" ><b>I T S K D H E R E</b></h1>
+        <h1 style="font-family: 'Open Sans'; font-size: 35px" class="logo"><b>I T S K D H E R E</b></h1>
         
         <div class="navbar-below-content">
           <div class="below-box">
             <p class="line-3">
-              Connect me on:
+            <b>Connect me on:</b>
             </p>
           </div>
     

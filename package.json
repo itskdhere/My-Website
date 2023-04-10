@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node --watch server.js",
     "start": "node server.js",
-    "prod": "pm2 server.js -n my-website"
+    "prod": "pm2 start server.js -n my-website"
   },
   "author": "KD",
   "license": "MIT",

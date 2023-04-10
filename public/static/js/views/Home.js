@@ -28,7 +28,7 @@ export default class extends AbstractView {
           </div>
     
           <div class="links">
-            <a href="instagram" style="color: rgb(200,10,200)" class="button" title="Instagram"> <i
+            <a href="#" style="color: rgb(200,10,200)" class="button" title="Instagram"> <i
                 class="fa-brands fa-instagram"></i></a>
             <a href="https://twitter.com/itskdhere" class="button" style="color:Dodgerblue" title="Twitter"> <i
                 class="fa-brands fa-twitter"></i></a>

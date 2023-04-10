@@ -8,7 +8,14 @@ export default class extends AbstractView {
 
     async getHtml() {
         return `
-            <h1>Contact</h1>
+    <link rel="stylesheet" href="/static/css/contact.css">
+    <header>
+        <h3>Contact Me</h3>
+    </header>
+
+    <main>
+        Comming Soon ..
+    </main>
         `;
     }
 }

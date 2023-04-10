@@ -1,25 +1,18 @@
 import AbstractView from "./AbstractView.js";
 
 export default class extends AbstractView {
-    constructor(params) {
-        super(params);
-        this.setTitle("Home");
-    }
+  constructor(params) {
+    super(params);
+    this.setTitle("Home");
+  }
 
-    async getHtml() {
-        return `
+  async getHtml() {
+    return `
         <header>
-        <!-- <img src="logo.png" class="logo" /> -->
-        <h1>I T S K D H E R E</h1>
+
+        <h1 style="font-family: 'Open Sans'" ><b>I T S K D H E R E</b></h1>
+        
         <div class="navbar-below-content">
-          <div class="scroll">
-            <p class="line-1 anim-typewriter1">
-              Hello There :)
-            </p>
-            <p class="line-2 anim-typewriter2">
-              I'm Krishnendu Das
-            </p>
-          </div>
           <div class="below-box">
             <p class="line-3">
               Connect me on:
@@ -27,8 +20,6 @@ export default class extends AbstractView {
           </div>
     
           <div class="links">
-            <a href="#" style="color: rgb(200,10,200)" class="button" title="Instagram"> <i
-                class="fa-brands fa-instagram"></i></a>
             <a href="https://twitter.com/itskdhere" class="button" style="color:Dodgerblue" title="Twitter"> <i
                 class="fa-brands fa-twitter"></i></a>
             <a href="https://github.com/itskdhere" style="color: black" class="button" title="">
@@ -58,5 +49,5 @@ export default class extends AbstractView {
     
       </main>
         `;
-    }
+  }
 }

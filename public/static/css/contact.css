@@ -1,12 +1,3 @@
-header {
-    padding: 1em;
-    clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
-    background: var(--bg-nav);
-    margin-bottom: 1em;
-    padding-bottom: 8em;
-    text-align: center;
-}
-
 main {
     min-height: 1000px;
     padding: 2rem;

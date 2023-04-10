@@ -47,6 +47,19 @@
     </nav>
 
     <div id="app"></div>
+
+    <script>
+        document.onreadystatechange = function () {
+            if (document.readyState !== "complete") {
+                document.querySelector("body").style.visibility = "hidden";
+                // document.querySelector("#loader").style.visibility = "visible";
+            } else {
+                // document.querySelector("#loader").style.display = "none";
+                document.querySelector("body").style.visibility = "visible";
+            }
+        };
+    </script>
+
     <script type="module" src="/static/js/index.js"></script>
     <script src="/static/js/theme.js"></script>
 </body>

@@ -7,6 +7,8 @@ const port = process.env.PORT || 3000;
 
 //server.use(express.static('public'));
 
+server.set('x-powered-by', 'Express.JS/NGiNX');
+
 server.use("/static", express.static(path.resolve("public", "static")));
 
 server.get("/*", (req, res) => {

@@ -22,10 +22,14 @@ server {
 	listen 80 default_server;
 	listen [::]:80 default_server;
 
-	server_name _;
+	server_name itskdhere.eu.org www.itskdhere.eu.org kd.ssh.surf itskdhere.ssh.surf ;
 
 	location ~ ^/($|blog|about|contact) {
         proxy_pass http://localhost:3000/$1;
+    }
+
+	location ~ ^/home {
+        proxy_pass http://localhost:3000;
     }
 
 	location /static/ {

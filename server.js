@@ -5,12 +5,12 @@ const server = express();
 
 const port = process.env.PORT || 3000;
 
-//server.use(express.static('public'));
+server.disable('x-powered-by');
+server.disable('X-Powered-By');
 
 server.use("/static", express.static(path.resolve("public", "static")));
 
 server.get("/*", (req, res) => {
-    res.removeHeader('X-Powered-By');
     res.sendFile(path.resolve("public", "index.html"));
 });
 

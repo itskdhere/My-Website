@@ -24,7 +24,7 @@ server {
 
 	server_name itskdhere.eu.org www.itskdhere.eu.org kd.ssh.surf itskdhere.ssh.surf ;
 
-	add_header X-Powered-By "Express.js/NGiNX";
+	add_header X-Powered-By "NGiNX && Express.js";
 
 	location ~ ^/($|blog|about|contact) {
         proxy_pass http://localhost:3000/$1;

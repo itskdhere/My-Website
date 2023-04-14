@@ -22,7 +22,7 @@ server {
 	listen 80 default_server;
 	listen [::]:80 default_server;
 
-	server_name itskdhere.eu.org www.itskdhere.eu.org kd.ssh.surf itskdhere.ssh.surf ;
+	server_name itskdhere.eu.org;
 
 	add_header X-Powered-By "NGiNX && Express.js";
 

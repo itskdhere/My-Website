@@ -53,7 +53,6 @@ h1 {
 
 .line-3 {
     position: relative;
-    /* border-right: 8px solid rgba(255, 255, 255, 0.75); */
     margin: 5px auto 0px auto;
     transform: translateY(-10%);
 }
@@ -61,38 +60,31 @@ h1 {
 /*.......Social Buttons.......*/
 .links {
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    justify-content: left;
-    justify-items: left;
-    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
     background-color: rgba(0, 0, 0, 0);
     color: rgb(19, 199, 73);
 }
 
 .button {
-    position: relative;
-    display: inline-block;
-    margin: auto;
-
-    padding: 10px;
-    height: 30px;
-    width: 30px;
-    font-size: 25px;
-    text-decoration: none;
-    border-radius: 12px;
+    --font-size: 1.5rem;
+    width: calc(var(--font-size) * 2);
+    height: calc(var(--font-size) * 2);
+    font-size: var(--font-size);
+    display: grid;
+    place-items: center;
+    border-radius: 5rem;
     background-color: var(--bg);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .button:hover {
-    background-color: var(--text);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    filter: brightness(1.1);
+    box-shadow: none;
 }
 
 .button:active {
-    background-color: rgb(83, 192, 33);
-    box-shadow: 0 1px rgb(71, 121, 24);
     transform: translateY(3px);
 }

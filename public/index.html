@@ -9,17 +9,76 @@
     <title>itskdhere</title>
 
     <style>
-        .LED1 {
-            position: relative;
-            top: -97px;
-            left: 85px;
-            height: 14px;
-            width: 14px;
-            border-radius: 50%;
-            animation: LED_Blink1 0.2s steps(1) 0s 1000 alternate none;
+        .hidden {
+            opacity: 0;
+            visibility: hidden;
         }
-
-        @keyframes LED_Blink1 {
+        .box {
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            background-color: rgb(252, 245, 235);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+            z-index: 10;
+        }
+        .server{
+            position: relative;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .upper-box {
+            margin-inline: auto;
+            height: 2.5rem;
+            width: 6rem;
+            background: rgb(120, 150, 160);
+            border-radius: 0.25rem;
+        }
+        .middle-box {
+            margin-inline: auto;
+            height: 1rem;
+            width: 1rem;
+            background: rgb(120, 150, 160);
+        }
+        .lower-box {
+            margin-inline: auto;
+            height: 1rem;
+            width: 6rem;
+            background: rgb(120, 150, 160);
+            border-radius: 0.25rem;
+        }
+        .text {
+            position: absolute;
+            left: 0.5rem;
+            top: 0.5rem;
+            padding: 0.25rem;
+            color: rgb(33, 245, 5);
+            background-color: rgb(15, 80, 90);
+            font-family: sans-serif;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 0.25rem;
+        }
+        .led {
+            position: absolute;
+            right: 0.5rem;
+            top: 0.9rem;
+            height: 0.75rem;
+            width: 0.75rem;
+            border-radius: 50%;
+            animation: led_blink 0.2s steps(1) infinite alternate;
+        }
+        .led:nth-child(2) {
+            right: 1.5rem;
+            animation: led_blink 0.2s steps(1) 0.1s infinite alternate;
+        }
+        @keyframes led_blink {
             0% {
                 background: rgb(20, 60, 50);
             }
@@ -27,81 +86,6 @@
             50% {
                 background: rgb(250, 240, 0);
             }
-        }
-
-        .LED2 {
-            position: relative;
-            top: -127px;
-            left: 110px;
-            height: 14px;
-            width: 14px;
-            border-radius: 50%;
-            animation: LED_Blink2 0.13s steps(1) 0s 1000 alternate none;
-        }
-
-        @keyframes LED_Blink2 {
-            0% {
-                background: rgb(0, 60, 40);
-            }
-
-            50% {
-                background: rgb(10, 240, 20);
-            }
-        }
-
-        .Text {
-            position: relative;
-            top: -161.5px;
-            left: 23px;
-            padding: 2px;
-            max-width: 20%;
-            color: rgb(33, 245, 5);
-            background-color: rgb(15, 80, 90);
-            font-family: 'courier new';
-            font-size: 14px;
-            font-weight: bold;
-            text-align: center;
-            border-radius: 2px;
-        }
-
-        .Box {
-            position: relative;
-            margin: auto;
-            top: 200px;
-            height: 90px;
-            width: 150px;
-        }
-
-        .Server {
-            position: relative;
-            top: 10px;
-            margin: auto;
-            height: 40px;
-            width: 120px;
-            background: rgb(120, 150, 160);
-            border-radius: 6px;
-            box-shadow: 6px 5px 25px 5px rgba(0, 0, 0, 0.39);
-        }
-
-        .Base {
-            position: relative;
-            top: 30px;
-            margin: auto;
-            height: 10px;
-            width: 80px;
-            background: rgb(120, 150, 160);
-            border-radius: 2px;
-            box-shadow: 6px 7px 20px 5px rgba(0, 0, 0, 0.849);
-        }
-
-        .Stick {
-            position: relative;
-            top: -30px;
-            margin: auto;
-            height: 55px;
-            width: 8px;
-            background: rgb(120, 150, 160);
-            border-radius: 2px;
         }
     </style>
 
@@ -117,64 +101,46 @@
 
     <link rel="icon" href="/static/img/nodejs.png" type="image/icon type">
 
-    <script>
+    <script defer>
         document.onreadystatechange = function () {
-            if (document.readyState !== "complete") {
-                document.querySelector("body").style.visibility = "hidden";
-                document.querySelector("#loader").style.visibility = "visible";
-            } else {
-                document.querySelector("#loader").style.display = "none";
-                document.querySelector("body").style.visibility = "visible";
+            if (document.readyState === "complete") {
+                document.getElementById("loader").classList.add("hidden");
             }
         };
     </script>
 
 </head>
 
-<body class="light solar" style="visibility: hidden;">
-
-    <div class="Box" id="loader">
-        <p class="Server"></p>
-        <p class="Base"></p>
-        <p class="Stick"></p>
-        <p class="LED1"></p>
-        <p class="LED2"></p>
-        <p class="Text">
-            200
-        </p>
+<body>
+    <div class="box" id="loader">
+        <div class="server">
+            <span class="text">200</span>
+            <span class="led"></span>
+            <span class="led"></span>
+            <span class="upper-box"></span>
+            <span class="middle-box"></span>
+            <span class="lower-box"></span>
+        </div>
     </div>
-
     <!-- Navbar -->
-    <nav class="navbar">
-        <ul class="navbar-nav">
-            <li class="nav-item"><a href="/" data-link>Home</a></li>
-            <li class="nav-item"><a href="/about" data-link>About</a></li>
-
-            <!-- Dropdown Start-->
-            <li class="nav-item has-dropdown">
-                <a href="#">Theme</a>
-                <ul class="dropdown">
-                    <li class="dropdown-item">
-                        <a id="light" href="#">light</a>
-                    </li>
-                    <li class="dropdown-item">
-                        <a id="dark" href="#">dark</a>
-                    </li>
-                    <li class="dropdown-item">
-                        <a id="solar" href="#">solarize</a>
-                    </li>
-                </ul>
+    <header class="navbar container">
+        <h1 class="logo">
+            <a href="/" data-link><span style="color: rgb(var(--primary-color)); font-size: 2.5rem;">.</span>itskdhere</a>
+        </h1>
+        <nav>
+           <ul>
+            <li onclick="document.body.classList.toggle('dark')" class="toggle-mode">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
             </li>
-            <!-- Dropdown End-->
-
-            <li class="nav-item"><a href="/blog" data-link>Blog</a></li>
-            <li class="nav-item"><a href="/contact" data-link>Contact</a></li>
-
-        </ul>
-    </nav>
-
+            <li><a href="/" data-link>Home</a></li>
+            <li><a href="/blog" data-link>Blog</a></li>
+            <li><a href="/contact" data-link>Contact</a></li>
+            <li><a href="/about" data-link>About</a></li>
+           </ul>
+        </nav>
+    </header>
     <div id="app"></div>
-
     <script type="module" src="/static/js/index.js"></script>
     <script src="/static/js/theme.js"></script>
 </body>

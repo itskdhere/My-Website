@@ -1,79 +1,118 @@
-main {
-    min-height: 1000px;
+main.home {
+    min-height: 80vh;
     padding: 2rem;
+    margin-block: 2rem;
+    border-radius: 2rem;
+    color: rgb(var(--light-color));
+    background: url(../img/matrix.png) no-repeat center center fixed;
+    background-size: cover;
 }
-
-img {
-    margin: 2em 0 0;
-    width: 180px;
-    height: 180px;
+main.home {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    isolation: isolate;
 }
-
-h1 {
-    transform: translateY(40%);
+main.home::before {
+    content: "";
+    position: absolute;
+    inset: 2rem;
+    border-radius: 2rem;
+    background: rgb(var(--dark-color));
+    z-index: -1;
 }
-
-/* margin: top right bottom left */
-.navbar-below-content {
-    margin-top: 4rem;
-}
-
-.below-box {
-    font-family: 'Anonymous Pro', monospace;
-    font-size: 30px;
+main.home .hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
     text-align: center;
+}
+main.home .hero h1 {
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: left;
+}
+main.home .hero h1 .line {
+    display: block;
     position: relative;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 5px;
-    top: -15px;
-    width: 250px;
-    color: var(--text);
+    overflow: hidden;
 }
-
-
-.line-3 {
+main.home .hero h1 .line:nth-child(2){
+    font-size: 5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(var(--primary-color));
+}
+main.home .hero h1 .line.scroll {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+}
+main.home .hero h1 .line.scroll .scroll-containter {
     position: relative;
-    /* border-right: 8px solid rgba(255, 255, 255, 0.75); */
-    margin: 5px auto 0px auto;
-    transform: translateY(-10%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
 }
-
-/*.......Social Buttons.......*/
-.links {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    justify-content: left;
-    justify-items: left;
-    height: 30px;
-    background-color: rgba(0, 0, 0, 0);
-    color: rgb(19, 199, 73);
+main.home .hero h1 .line .auto-scroll {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+    animation: scroll 3s linear infinite forwards;
 }
-
-.button {
-    position: relative;
-    display: inline-block;
-    margin: auto;
-
-    padding: 10px;
-    height: 30px;
-    width: 30px;
-    font-size: 25px;
-    text-decoration: none;
-    border-radius: 12px;
-    background-color: var(--bg);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+@keyframes scroll {
+    0%, 30%{
+        top: -3.25rem;
+    }
+    33%, 63% {
+        top: 0;
+    }
+    66%, 96% {
+        top: 3.25rem;
+    }
 }
-
-.button:hover {
-    background-color: var(--text);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+main.home .connect ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
-
-.button:active {
-    background-color: rgb(83, 192, 33);
-    box-shadow: 0 1px rgb(71, 121, 24);
-    transform: translateY(3px);
+main.home .connect ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 5rem;
+    color: rgb(var(--dark-color));
+    background: rgb(var(--white-color));
+    cursor: pointer;
+    transition: 0.15s;
+}
+main.home .connect ul li:hover {
+    transform: scale(1.1);
+    color: rgb(var(--white-color));
+    background: rgb(var(--primary-color));
+    box-shadow: 0 0 0.5rem rgb(var(--primary-color));
 }

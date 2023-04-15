@@ -8,42 +8,47 @@ export default class extends AbstractView {
 
   async getHtml() {
     return `
-        <header>
-        <h1 style="font-family: 'Open Sans'; font-size: 35px" class="logo"><b>itskdhere</b></h1>
-        <div class="navbar-below-content">
-          <div class="below-box">
-            <p class="line-3">
-            <b>Connect me on:</b>
-            </p>
-          </div>
-          <div class="links">
-            <a href="https://twitter.com/itskdhere" target="_blank" class="button" style="color:Dodgerblue" title="Twitter"> <i
-                class="fa-brands fa-twitter"></i></a>
-            <a href="https://github.com/itskdhere" target="_blank" style="color: black" class="button" title="">
-              <i class="fa-brands fa-github"></i></a>
-            <a href="https://www.reddit.com/u/itskdhere" target="_blank" style="color: red" class="button" title="Github"> <i
-                class="fa-brands fa-reddit"></i></a>
-            <a href="https://discord.gg/9CDh4Qh6vz" target="_blank" style="color: blue" class="button" title="Discord">
-              <i class="fa-brands fa-discord"></i></a>
-          </div>
-        </div>
-      </header>
-      <main>
-        <h3>Hi, I'm <b>KD</b></h3>
-        <p>
-          a 18 years old, a student, a developer, a designer, a gamer, a <b>dreamer</b> and a <b>thinker</b>.
+    <main class="container home">
+    <div class="hero">
+        <h1>
+            <span class="line">Hello, I'm</span>
+            <span class="line">itskdhere</span>
+            <div class="line scroll">
+                <div>I'm a</div>
+                <div class="scroll-containter">
+                    <div class="auto-scroll">
+                        <div class="auto-scroll--item">Developer</div>
+                        <div class="auto-scroll--item">Hecker</div>
+                        <div class="auto-scroll--item">Programmer</div>
+                    </div>
+                </div>
+            </div>
+        </h1>
+        <p class="subline">
+            I'm a 18 year old developer from India. I love to code and make cool stuff.
         </p>
-        <p>
-          😴
-        </p>
-    
-        <h3>About Me:</h3>
-    
-        <p>
-          Hehe
-        </p>
-    
-      </main>
+    </div>
+    <div class="connect">
+        <ul class="links">
+            <li>
+                <a href="https://twitter.com/itskdhere" target="_blank" class="button" title="Twitter"> <i
+                        class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li>
+                <a href="https://github.com/itskdhere" target="_blank" class="button" title="Github">
+                    <i class="fa-brands fa-github"></i></a>
+            </li>
+            <li>
+                <a href="https://www.reddit.com/u/itskdhere" target="_blank" class="button" title="Reddit"> <i
+                        class="fa-brands fa-reddit"></i></a>
+            </li>
+            <li>
+                <a href="https://discord.gg/9CDh4Qh6vz" target="_blank" class="button" title="Discord"> <i
+                        class="fa-brands fa-discord"></i></a>
+            </li>
+        </ul>
+    </div>
+</main>
         `;
   }
 }

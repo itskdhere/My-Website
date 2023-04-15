@@ -165,25 +165,6 @@ a {
     margin-right: 10px;
 }
 
-
-/* Logo Animation */
-
-@keyframes color-rotate {
-    from {
-        filter: hue-rotate(0deg);
-    }
-
-    to {
-        filter: hue-rotate(360deg);
-    }
-}
-
-.logo {
-    animation: color-rotate 1s;
-    animation-iteration-count: infinite;
-    animation-direction: reverse;
-}
-
 /*Scroll Bar*/
 /* width */
 ::-webkit-scrollbar {

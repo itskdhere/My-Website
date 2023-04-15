@@ -2,11 +2,10 @@
   "name": "my-website",
   "version": "1.0.0",
   "description": "My Website",
-  "private": "true",
+  "private": "false",
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node --watch server.js",
     "start": "node server.js",
     "prod": "pm2 start server.js -n my-website"

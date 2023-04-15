@@ -3,6 +3,25 @@ main {
     padding: 2rem;
 }
 
+.logo {
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+    /* animation: color-rotate 1s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse; */
+}
+/* Logo Animation */
+
+@keyframes color-rotate {
+    from {
+        filter: hue-rotate(0deg);
+    }
+
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
 img {
     margin: 2em 0 0;
     width: 180px;

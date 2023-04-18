@@ -61,6 +61,7 @@ export default class extends AbstractView {
             <li>Arduino IoT Cloud , Blynk IoT Cloud</li>
             <li>Internet of Things (IoT)</li>
             <li>Cloudflare , FireBase , GCP</li>
+            <li>MySQL & Microsoft SQL Server</li>
             <li>Docker & NGiNX</li>
             <li>Server Administration</li>
             <li>Home Automation</li>

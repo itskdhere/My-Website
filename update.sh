@@ -1,7 +1,7 @@
 git pull
 sleep 1
-copy nginx/sites-available/default /etc/nginx/sites-available/default
-copy nginx/nginx.conf /etc/nginx/nginx.conf
+cp nginx/sites-available/default /etc/nginx/sites-available/default
+cp nginx/nginx.conf /etc/nginx/nginx.conf
 sleep 1
 nginx -s reload
 sleep 1

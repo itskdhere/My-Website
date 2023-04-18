@@ -33,21 +33,40 @@ export default class extends AbstractView {
       </header>
     
       <main>
-        <h3>Hi, I'm <b>KD</b></h3>
-        <p>
-          a 18 years old, a student, a developer, a designer, a gamer, a <b>dreamer</b> and a <b>thinker</b>.
-        </p>
-        <p>
-          😴
-        </p>
-    
-        <h3>About Me:</h3>
-    
-        <p>
-          Hehe
-        </p>
-    
-      </main>
+        <h3>Hello there,</h3>
+        <p><b>
+                I'm KD, a 18 years old Student && Developer from West Bengal, India.
+            </b></p>
+        <br>
+
+        <h3><u>My Tech Stack:</u></h3>
+        <ul style="list-style-type: circle;">
+            <li style="list-style-type: none;"><b>Languages:</b></li>
+            <li>C && C++ ;</li>
+            <li>HTML and .CSS{ }</li>
+            <li>JavaScript ;</li>
+            <li>SQL ;</li>
+        </ul>
+        <br>
+        <ul style="list-style-type: circle;">
+            <li style="list-style-type: none;"><b>Frameworks && Runtimes:</b></li>
+            <li>Arduino</li>
+            <li>Node.JS</li>
+            <li>Qt</li>
+        </ul>
+        <br>
+        <ul style="list-style-type: circle;">
+            <li style="list-style-type: none;"><b>Others:</b></li>
+            <li>ATMega328p , ESP8266 , ESP32</li>
+            <li>Arduino IoT Cloud , Blynk IoT Cloud</li>
+            <li>Internet of Things (IoT)</li>
+            <li>Cloudflare , FireBase , GCP</li>
+            <li>Docker & NGiNX</li>
+            <li>Server Administration</li>
+            <li>Home Automation</li>
+        </ul>
+
+    </main>
         `;
   }
 }

@@ -33,40 +33,64 @@ export default class extends AbstractView {
       </header>
     
       <main>
-        <h3>Hello there,</h3>
-        <p><b>
-                I'm KD, a 18 years old Student && Developer from West Bengal, India.
-            </b></p>
+        <h3>Hello there 👋</h3>
+        <p>
+            <b>
+              I'm KD, 1st year B.Tech CSE student && Full-Stack Web Developer from West Bengal, India.
+            </b>
+          </p>
         <br>
 
-        <h3><u>My Tech Stack:</u></h3>
+        <h3><u>Technologies I use:</u></h3>
+        <div>
         <ul style="list-style-type: circle;">
             <li style="list-style-type: none;"><b>Languages:</b></li>
             <li>C && C++ ;</li>
-            <li>HTML and .CSS{ }</li>
-            <li>JavaScript ;</li>
+            <li>&lt;/HTML&gt; and .CSS{ }</li>
+            <li>JavaScript && TypeScript ;</li>
             <li>SQL ;</li>
         </ul>
         <br>
         <ul style="list-style-type: circle;">
-            <li style="list-style-type: none;"><b>Frameworks && Runtimes:</b></li>
-            <li>Arduino</li>
-            <li>Node.JS</li>
-            <li>Qt</li>
+            <li style="list-style-type: none;"><b>Misc.:</b></li>
+            <li>Node.js</li>
+            <li>Docker</li>
+            <li>NGINX</li>
+            <li>Git & GitHub</li>
+            <li>Linux: Ubuntu, Debian, Alpine</li>
         </ul>
         <br>
         <ul style="list-style-type: circle;">
-            <li style="list-style-type: none;"><b>Others:</b></li>
-            <li>ATMega328p , ESP8266 , ESP32</li>
-            <li>Arduino IoT Cloud , Blynk IoT Cloud</li>
-            <li>Internet of Things (IoT)</li>
-            <li>Cloudflare , FireBase , GCP</li>
-            <li>MySQL & Microsoft SQL Server</li>
-            <li>Docker & NGiNX</li>
-            <li>Server Administration</li>
-            <li>Home Automation</li>
+            <li style="list-style-type: none;"><b>Frameworks:</b></li>
+            <li>Express.js</li>
+            <li>React.js</li>
+            <li>Discord.js</li>
+            <li>Arduino</li>
         </ul>
-
+        <br>
+        <ul style="list-style-type: circle;">
+            <li style="list-style-type: none;"><b>Cloud:</b></li>
+            <li>Azure, GCP</li>
+            <li>Netlify, Cloudflare</li>
+            <li>FireBase, SupaBase, PocketBase</li>
+            <li>Arduino IoT Cloud , Blynk IoT Cloud</li>
+        </ul>
+        <br>
+        <ul style="list-style-type: circle;">
+            <li style="list-style-type: none;"><b>Databases:</b></li>
+            <li>FireStore</li>
+            <li>MongoDB</li>
+            <li>Redis</li>
+            <li>MySQL</li>
+        </ul>
+        <br>
+        <ul style="list-style-type: circle;">
+            <li style="list-style-type: none;"><b>Microcontrollers:</b></li>
+            <li>ATMega328p</li>
+            <li>ESP8266 & ESP32</li>
+        </ul>
+        <br>
+        </div>
     </main>
         `;
   }

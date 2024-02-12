@@ -22,9 +22,9 @@ export default class extends AbstractView {
           <div class="links">
             <a href="https://twitter.com/itskdhere" class="button" style="color:Dodgerblue" title="Twitter"> <i
                 class="fa-brands fa-twitter"></i></a>
-            <a href="https://github.com/itskdhere" style="color: black" class="button" title="">
+            <a href="https://github.com/itskdhere" style="color: black" class="button" title="Github">
               <i class="fa-brands fa-github"></i></a>
-            <a href="https://www.reddit.com/u/itskdhere" style="color: red" class="button" title="Github"> <i
+            <a href="https://www.reddit.com/u/itskdhere" style="color: red" class="button" title="Reddit"> <i
                 class="fa-brands fa-reddit"></i></a>
             <a href="https://discord.gg/9CDh4Qh6vz" style="color: blue" class="button" title="Discord">
               <i class="fa-brands fa-discord"></i></a>
